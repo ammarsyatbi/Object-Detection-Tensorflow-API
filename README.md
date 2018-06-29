@@ -3,16 +3,16 @@ Have you ever look at a tree and wonder , how many leaves does it have ? Well, w
 
 I only cover the training and testing part, from what I found, tensorflow object detection API documention is not very friendly with windows user, hopefully this can help you guys.
 
-For tensor flow installation please refer <a href = "https://www.tensorflow.org/install/"> here </> or <a href = "https://www.youtube.com/watch?v=r7-WPbx8VuY">sentdex tutorial</>
+For tensor flow installation please refer [here](https://www.tensorflow.org/install/) or [sentdex tutorial](https://www.youtube.com/watch?v=r7-WPbx8VuY)
 
-You can refer Tensorflow Object Detection API here <a href = "https://github.com/tensorflow/models/blob/master/research/object_detection/README.md"> here </>
+You can refer Tensorflow Object Detection API [here](https://github.com/tensorflow/models/blob/master/research/object_detection/README.md)
 
 
 As you can see I only uploaded the object_detection folder, so you can replace yours with mine if you clone the whole model.
 
 ### Steps simplified ###
 
-1. Dataset preparation (label images using <a href="https://github.com/tzutalin/labelImg">labelImg</a>)
+1. Dataset preparation (label images using [labelImg](https://github.com/tzutalin/labelImg))
 2. Convert xml to csv
 3. Generate tf record
 4. Download pre-trained model and put it in object_detection folder ( make sure the path is correct) / you can just extract model.ckpt
@@ -38,7 +38,7 @@ python generate_tfrecord.py --csv_input=data/test_labels.csv --output_path=data/
 ```
 Run in object_detection folder:
 Training
-**It would be easier if you just set environment variables**
+***It would be easier if you just set environment variables***
 SET PYTHONPATH=%PYTHONPATH%:'YOUR_PATH_TO_MODEL/models/research/slim/nets':'YOUR_PATH_TO_MODEL/models/research'/slim
 ``` bash
 python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco_11_06_2017.config
@@ -57,14 +57,14 @@ Things to improve:
 
 ### Results ###
 
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result1.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result2.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result3.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result4.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result5.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result6.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result7.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result8.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result9.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result10.png)
-![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/result/result11.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result1.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result2.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result3.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result4.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result5.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result6.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result7.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result8.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result9.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result10.png)
+![](https://github.com/ammarsyatbi/Object-Detection-Tensorflow-API/blob/master/object_detection/results/result11.png)
